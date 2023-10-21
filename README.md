@@ -6,4 +6,4 @@ Krychle a jehlan + simulace Země: [Objekty](3DRendererV3/3DRendererV3/Object.cs
 
 [Animace](Animace/Kód.cs) v prezentaci vytvořené pomoci [Manim](https://www.manim.community)
 
-[Ukázky](Ukázky) nahrané pomoci [OBS Studio](https://obsproject.com/cs)
+[Ukázky](Ukázky/scene.py) nahrané pomoci [OBS Studio](https://obsproject.com/cs)
