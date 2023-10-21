@@ -1,0 +1,16 @@
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\bin\Debug\net6.0-windows\3DRenderer.exe
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\bin\Debug\net6.0-windows\3DRenderer.deps.json
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\bin\Debug\net6.0-windows\3DRenderer.runtimeconfig.json
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\bin\Debug\net6.0-windows\3DRenderer.dll
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\bin\Debug\net6.0-windows\3DRenderer.pdb
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\_3DRenderer.Form1.resources
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.csproj.GenerateResource.cache
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.AssemblyInfoInputs.cache
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.AssemblyInfo.cs
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.csproj.CoreCompileInputs.cache
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.dll
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\refint\3DRenderer.dll
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.pdb
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\3DRenderer.genruntimeconfig.cache
+C:\Users\tomek\source\repos\3DRenderer\3DRenderer\obj\Debug\net6.0-windows\ref\3DRenderer.dll
