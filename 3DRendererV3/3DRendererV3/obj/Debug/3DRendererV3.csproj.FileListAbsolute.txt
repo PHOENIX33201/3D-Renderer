@@ -1,0 +1,9 @@
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\obj\Debug\3DRendererV3.csproj.AssemblyReference.cache
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\obj\Debug\_3DRendererV3.Properties.Resources.resources
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\obj\Debug\3DRendererV3.csproj.GenerateResource.cache
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\obj\Debug\3DRendererV3.csproj.CoreCompileInputs.cache
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\bin\Debug\3DRendererV3.exe.config
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\bin\Debug\3DRendererV3.exe
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\bin\Debug\3DRendererV3.pdb
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\obj\Debug\3DRendererV3.exe
+C:\Users\tomek\source\repos\3DRendererV3\3DRendererV3\obj\Debug\3DRendererV3.pdb
