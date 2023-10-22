@@ -79,7 +79,7 @@ namespace _3DRenderer
             for (int i = 0; i < _vertices.Length; i++)
                 projectedVertices[i] = GetVertexProjection(_vertices[i]);
 
-            using (Pen pen = new Pen(_color, 1))
+            using (Pen pen = new Pen(_color, 2))
             {
                 for (int i = 0; i < _connections.Length; i++)
                 {

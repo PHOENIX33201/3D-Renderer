@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Numerics;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace _3DRenderer
 {
@@ -16,6 +17,7 @@ namespace _3DRenderer
         private const double FOCAL_LENGTH = 1000;
         private const int _INTERVAL = 10;
         private const int _DELAY = 1000;
+        private int _counter = 50;
         private int _timeLeft;
 
         private readonly Object[,,] _pieces = new Object[3, 3, 3];
@@ -92,6 +94,9 @@ namespace _3DRenderer
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            
+
             int R = -30;
             int L = 30;
             int U = -30;
@@ -116,7 +121,7 @@ namespace _3DRenderer
 
             };
 
-            pivot = new Quaternion(0, 0, -500, 0);
+            pivot = new Quaternion(0, 0, -750, 0);
             Quaternion P_EMPTY = new Quaternion(0, 0, 0, 0);
             axisOfRotation = Vector3.Normalize(new Vector3(1, 1, 1)); 
             angleInRadians = (float)Math.PI / 50 * 0;
@@ -240,7 +245,17 @@ namespace _3DRenderer
 
             #endregion
             _cube = cube;
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Size = new Size(workingArea.Width, workingArea.Height);
+            this.Location = new Point(workingArea.Left, workingArea.Top);
         }
+
+
+
 
         void RotateSide()
         {
@@ -602,6 +617,7 @@ namespace _3DRenderer
         {
             Graphics g = e.Graphics; // Take a Graphics object from the PaintEventArgs
 
+            
             RotateSide();
 
             OnRotate?.Invoke();
@@ -612,7 +628,17 @@ namespace _3DRenderer
                 bufferGraphics.FillRectangle(brush, this.ClientRectangle);// Fill the entire form with the specified color
             }
 
-            OnDraw?.Invoke(bufferGraphics, this.ClientRectangle, FOCAL_LENGTH, new Quaternion(0, 0, 0, 0));
+            if (_counter > 0)
+            {
+                _counter--;
+            }
+            else
+            { 
+                OnDraw?.Invoke(bufferGraphics, this.ClientRectangle, FOCAL_LENGTH, new Quaternion(0, 0, 0, 0));
+            }
+
+
+            
 
             g.DrawImage(buffer, 0, 0);
 

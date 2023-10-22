@@ -105,7 +105,7 @@ namespace _3DRendererV3
                 (3, 0), (7, 4), (3, 7),
             };
 
-            pivot = new Vector3(-100, 0, 0);
+            pivot = new Vector3(-100, 0, -7000);
             rotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0.7f), 2f * TIME_SCALE);
             new Object(pivot, vertices, edges, Color.Green, rotation);
 
@@ -128,7 +128,7 @@ namespace _3DRendererV3
                 (3, 0), (3, 4),
             };
 
-            pivot = new Vector3(100, 0, 0);
+            pivot = new Vector3(100, 0, -7000);
             rotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0), 2f * TIME_SCALE);
             new Object(pivot, vertices, edges, Color.Purple, rotation).Rotate(Quaternion.CreateFromAxisAngle(new Vector3(0, 0, 1), (float)Math.PI / 2));
         }
@@ -162,12 +162,12 @@ namespace _3DRendererV3
                 (3, 0), (7, 4), (3, 7),
             };
 
-            pivot = new Vector3(0, -200, 0);
+            pivot = new Vector3(0, 0, -7000);
             rotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 1f), 1.997f * TIME_SCALE);
-            new Object(null, vertices, edges, Color.Yellow, rotation);
+            new Object(pivot, vertices, edges, Color.Yellow, rotation);
 
-            rotation = Quaternion.CreateFromAxisAngle(new Vector3(-1, -1, -1), 10f / 365f * TIME_SCALE);
-            Object earthPivot = new Object(null, null, null, Color.Black, rotation);
+            rotation = Quaternion.CreateFromAxisAngle(new Vector3(-1, -1, -1), 10f / 365f * 3f * TIME_SCALE);
+            Object earthPivot = new Object(pivot, null, null, Color.Black, rotation);
 
             vertices = new Vector3[]
             {
@@ -183,10 +183,10 @@ namespace _3DRendererV3
             };
 
             pivot = new Vector3(100, 100, -100);
-            rotation = Quaternion.CreateFromAxisAngle(new Vector3(1, 1, 1), 10f * TIME_SCALE);
+            rotation = Quaternion.CreateFromAxisAngle(new Vector3(1, 1, 1), 2f * TIME_SCALE);
             Object earth = new Object(pivot, vertices, edges, Color.Blue, rotation, earthPivot);
 
-            rotation = Quaternion.CreateFromAxisAngle(new Vector3(-1, -1, -1), 10f / (26f / 27f) * TIME_SCALE);
+            rotation = Quaternion.CreateFromAxisAngle(new Vector3(-1, -1, -1), 2f / (26f / 27f) * TIME_SCALE);
             Object moonPivot = new Object(null, null, null, Color.Black, rotation, earth);
 
             vertices = new Vector3[]
@@ -220,6 +220,13 @@ namespace _3DRendererV3
                     SolarSystem();
                     break;
             }
+
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+
+            Rectangle workingArea = Screen.GetWorkingArea(this);
+            this.Size = new Size(workingArea.Width, workingArea.Height);
+            this.Location = new Point(workingArea.Left, workingArea.Top);
         }
 
         private void RenderOnScreen(Graphics g)

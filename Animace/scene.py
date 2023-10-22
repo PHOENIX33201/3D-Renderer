@@ -17,6 +17,55 @@ def SweepLine(self, rect):
     self.play(MoveAlongPath(rect, l), run_time=2)
     self.wait(0.2)
 
+class CreateCircle(Scene):
+    def construct(self):
+        circle = Circle()  # create a circle
+        circle.set_fill(PINK, opacity=0.5)  # set the color and transparency
+        self.play(Create(circle))  # show the circle on screen
+
+class SquareToCircle(Scene):
+    def construct(self):
+        circle = Circle()  # create a circle
+        circle.set_fill(PINK, opacity=0.5)  # set color and transparency
+
+        square = Square()  # create a square
+        square.rotate(PI / 4)  # rotate a certain amount
+
+        self.play(Create(square))  # animate the creation of the square
+        self.play(Transform(square, circle))  # interpolate the square into the circle
+        self.play(FadeOut(square))  # fade out animation
+
+class TextTest(Scene):
+    def construct(self):
+        text1 = Tex(r"$\sqrt{a^2+\sqrt{b^2+c^2}^2} < distance$")
+        text2 = Tex(r"$a^2+b^2+c^2 < distance^2$")
+
+        self.play(Write(text1), run_time=5)
+        self.wait(3)
+
+class TextTest2(Scene):
+    def construct(self):
+        text1 = Tex(r"$\sqrt{a^2+\sqrt{b^2+c^2}^2} < distance$")
+        text2 = Tex(r"$a^2+b^2+c^2 < distance^2$")
+
+        self.add(text1)
+        self.play(Transform(text1, text2), run_time=1.5)  # interpolate the square into the circle
+        self.wait(3)
+
+class TextTest3(Scene):
+    def construct(self):
+        circle = Ellipse(color = BLUE, width = 15, height = 2.5)  # create a circle
+        circle.set_fill(BLUE, opacity=1)  # set the color and transparency
+        
+        text1 = Tex(r"Štít je zapnutý nebo zničený", height = 1.15)
+        text1.z_index=1
+
+        self.play(Write(text1), run_time=4)
+        self.wait(0.1)
+        
+        self.play(Create(circle), run_time=1)  # show the circle on screen
+        self.wait(1)
+
 class WriteText1(Scene):
     def construct(self):
         rect = Sweeper(self)
