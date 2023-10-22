@@ -8,4 +8,4 @@ Krychle a jehlan + simulace Země: [Objekty](3DRendererV3/3DRendererV3/Object.cs
 
 [Ukázky](Ukázky/) nahrané pomoci [OBS Studio](https://obsproject.com/cs)
 
-A na konec [Prezentace](3D Renderer.pptx)
+A na konec [Prezentace](3DRenderer.pptx)
